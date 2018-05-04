@@ -1,0 +1,20 @@
+<button (click)="getVehicles()">Get Vehicles</button>
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngFor="let email of emails">{{email}}</button>
+  <button mat-menu-item>Sign In</button>
+</mat-menu>
+
+<div *ngFor="let vehicle of vehicles">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{vehicle.vin}}</mat-card-title>
+      <mat-card-subtitle>{{vehicle.id}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Test
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
